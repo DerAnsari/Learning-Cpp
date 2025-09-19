@@ -1,16 +1,23 @@
 #include <cmath>
 #include <iostream>
+#include <string>
+
+using std::cin, std::cout, std::string;
 
 int main() {
-  double b, c;
-  std::cin >> b >> c; // input coefficients
+  double a, b, c;
+  cout << "Enter the coefficients";
+  cin >> a >> b >> c;
 
-  // Calculate roots of x*x + b*x + c.
-  double discriminant = b * b - 4.0 * c;
-  double d = std::sqrt(discriminant);
-  double root1 = (-b + d) / 2.0;
-  double root2 = (-b - d) / 2.0;
+  string state{""};
+  double discriminant = pow(b, 2) - 4.0 * (a * c);
+  if (discriminant > 0) {
+    state = "Two real roots";
+  } else if (discriminant < 0) {
+    state = "No real roots";
+  } else {
+    state = "One real root";
+  }
 
-  // Print them out.
-  std::cout << root1 << " " << root2 << std::endl;
+  cout << state;
 }
