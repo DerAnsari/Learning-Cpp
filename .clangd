@@ -1,0 +1,2 @@
+CompiledFlags:
+  Add: [-std=c++2c]
