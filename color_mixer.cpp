@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 using namespace std;
 
@@ -19,10 +20,10 @@ int main() {
   double mixedGrey{0.299 * mixedR + 0.587 * mixedG + 0.114 * mixedB};
 
   // output
-  cout << "Mixed Color: " << "(" << static_cast<int>(mixedR) << ", "
-       << static_cast<int>(mixedG) << ", " << static_cast<int>(mixedB)
+  cout << "Mixed Color: " << "(" << static_cast<int>(round(mixedR)) << ", "
+       << static_cast<int>(mixedG) << ", " << static_cast<int>(round(mixedB))
        << ") \n";
-  cout << "First Color greyScale: " << static_cast<int>(firstGrey);
-  cout << "\n Second Color greyScale: " << static_cast<int>(secondGrey);
-  cout << "\n Mixed Color greyScale: " << static_cast<int>(mixedGrey);
+  cout << "First Color greyScale: " << static_cast<int>(round(firstGrey));
+  cout << "\n Second Color greyScale: " << static_cast<int>(round(secondGrey));
+  cout << "\n Mixed Color greyScale: " << static_cast<int>(round(mixedGrey));
 }

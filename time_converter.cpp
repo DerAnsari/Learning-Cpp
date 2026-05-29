@@ -16,7 +16,9 @@ int main() {
 
   // calculating the percentage
   // int totalYear{31557600};
-  double year{(seconds / (365.25 * 84000)) * 100};
+  double yearSec = 365.25 * 24 * 60 * 60;
+  cout << yearSec;
+  double year{(seconds / yearSec) * 100};
 
   // result
   cout << "Time: " << days << "Days, " << remainingHr << "Hours, "

@@ -11,17 +11,22 @@ int main() {
   case 1:
     diameter = 8;
     price = 750;
+    break;
   case 2:
     diameter = 12;
     price = 1350;
+    break;
   case 3:
     diameter = 16;
     price = 1600;
+    break;
   case 4:
     diameter = 20;
     price = 2200;
+    break;
   }
-  double pizzaArea{3.143 * static_cast<double>(diameter)};
+  int radius = diameter / 2;
+  double pizzaArea{3.143 * static_cast<double>(radius * radius)};
 
   double pricePersq{price / pizzaArea};
 

@@ -10,9 +10,9 @@ int main() {
 
   string word{"Hello"};
   for (int count{1}; count <= num; count++) {
-    if (count % 100 < 10 && count % 100 < 20) {
+    if ((count % 100 >= 11 && count % 100 <= 13)) {
 
-      cout << count << "th";
+      cout << count << "th " << word << "\n";
 
     } else {
 

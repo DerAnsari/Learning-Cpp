@@ -14,7 +14,7 @@ int main() {
   int calcYear = year - (14 - month) / 12;
   int mysteryX =
       calcYear + (calcYear / 4) - (calcYear / 100) + (calcYear / 400);
-  int calcMonth = month + 12 * (14 - month / 12) - 2;
+  int calcMonth = month + 12 * ((14 - month) / 12) - 2;
   int calcDay = (day + mysteryX + (31 * calcMonth / 12)) % 7;
 
   cout << "the day would fall on \n" << calcDay;
